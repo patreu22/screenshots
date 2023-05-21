@@ -141,7 +141,7 @@ const List<ScreenInfo> screens = [
     "80%",
     "-3+8",
     "phone",
-    ['Nexus 6P', 'Pixel 4', 'Pixel XL'],
+    ['Nexus 6P', 'Pixel 4', 'Pixel XL', 'Samsung Galaxy S21 Ultra'],
     statusbar: i16.r,
     statusbarBlack: i16.r,
     statusbarWhite: i16.r,
@@ -171,7 +171,7 @@ const List<ScreenInfo> screens = [
     null,
     null,
     "phone",
-    ['default phone', 'Nexus 6', 'Pixel 4', 'Pixel XL'],
+    ['default phone', 'Nexus 6', 'Pixel 4', 'Pixel XL', 'Samsung Galaxy S21 Ultra'],
   ),
   ScreenInfo(
     DeviceType.android,
