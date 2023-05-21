@@ -14,10 +14,10 @@ locales:
 # A map of devices to run tests on
 devices:
   ios:
-#    iPhone XS Max:
-#    iPhone 8 Plus:
-#    iPad Pro (12.9-inch) (3rd generation):
-#      frame: false
+    #    iPhone XS Max:
+    #    iPhone 8 Plus:
+    #    iPad Pro (12.9-inch) (3rd generation):
+    #      frame: false
     iPhone 8:
     iPhone 11:
 

@@ -64,6 +64,7 @@ ios:
       - iPhone 12 Pro Max
       - iPhone 13 Pro Max
       - iPhone 14 Plus
+      - iPhone 14 Pro
   #  7.9inches:
   #    devices:
   #      - iPad Mini
@@ -109,6 +110,7 @@ ios:
     devices:
       - iPad Pro (12.9-inch) (3rd generation)
       - iPad Pro (12.9-inch) (4th generation)
+      - iPad Pro (11-inch) (2nd generation)
 android:
   5.2inch:
     size: 1080x1920
@@ -139,6 +141,8 @@ android:
     devices:
       - Nexus 6P
       - Pixel 4
+      - Pixel XL
+      - Samsung Galaxy S21 Ultra
   8.9inch:
     size: 1536x2048
     resize: 80%
