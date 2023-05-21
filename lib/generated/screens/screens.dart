@@ -37,6 +37,7 @@ const List<ScreenInfo> screens = [
       'iPhone 6s Plus',
       'iPhone 7 Plus',
       'iPhone 8 Plus',
+      'iPhone 14 Pro',
     ],
     statusbar: i1.r,
     statusbarBlack: i1.r,
