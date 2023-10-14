@@ -139,6 +139,19 @@ android:
     devices:
       - Nexus 6P
       - Pixel 4
+  6inch:
+    size: 1080x2340
+    resize: 80%
+    resources:
+      statusbar: screens/android/1080/statusbar-pixel5.png
+      statusbar black: screens/android/1080/statusbar-pixel5.png
+      statusbar white: screens/android/1080/statusbar-pixel5.png
+      navbar: screens/android/1080/navbar-pixel5.png
+      frame: screens/android/phones/Google Pixel 5 Just Black.png
+    offset: -3+8
+    destName: phone
+    devices:
+      - Pixel 5
   8.9inch:
     size: 1536x2048
     resize: 80%

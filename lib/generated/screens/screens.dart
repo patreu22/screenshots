@@ -1,15 +1,18 @@
 import '../../src/globals.dart';
 import '../../src/resources.dart';
 
+import 'android/1080/navbar-pixel5.png.dart' as i20;
 import 'android/1080/navbar.png.dart' as i14;
+import 'android/1080/statusbar-pixel5.png.dart' as i19;
 import 'android/1080/statusbar.png.dart' as i13;
 import 'android/1440/navbar_black.png.dart' as i17;
 import 'android/1440/statusbar.png.dart' as i16;
-import 'android/1536/navigationbar.png.dart' as i20;
-import 'android/1536/statusbar.png.dart' as i19;
+import 'android/1536/navigationbar.png.dart' as i23;
+import 'android/1536/statusbar.png.dart' as i22;
+import 'android/phones/Google Pixel 5 Just Black.png.dart' as i21;
 import 'android/phones/Nexus 6P.png.dart' as i18;
 import 'android/phones/Nexus_5X.png.dart' as i15;
-import 'android/tablets/Nexus 9.png.dart' as i21;
+import 'android/tablets/Nexus 9.png.dart' as i24;
 import 'ios/1125/statusbar_black.png.dart' as i5;
 import 'ios/1125/statusbar_white.png.dart' as i4;
 import 'ios/1242/statusbar_black.png.dart' as i1;
@@ -109,7 +112,6 @@ const List<ScreenInfo> screens = [
     [
       'iPad Pro (12.9-inch) (3rd generation)',
       'iPad Pro (12.9-inch) (4th generation)',
-      'iPad Pro (12.9-inch) (6th generation)',
     ],
     statusbar: i10.r,
     statusbarBlack: i10.r,
@@ -139,12 +141,31 @@ const List<ScreenInfo> screens = [
     "80%",
     "-3+8",
     "phone",
-    ['Nexus 6P', 'Pixel 4'],
+    [
+      'Nexus 6P',
+      'Pixel 4',
+    ],
     statusbar: i16.r,
     statusbarBlack: i16.r,
     statusbarWhite: i16.r,
     navbar: i17.r,
     frame: i18.r,
+  ),
+  ScreenInfo(
+    DeviceType.android,
+    '6inch',
+    "1080x2340",
+    "80%",
+    "-3+8",
+    "phone",
+    [
+      'Pixel 5',
+    ],
+    statusbar: i19.r,
+    statusbarBlack: i19.r,
+    statusbarWhite: i19.r,
+    navbar: i20.r,
+    frame: i21.r,
   ),
   ScreenInfo(
     DeviceType.android,
@@ -156,11 +177,11 @@ const List<ScreenInfo> screens = [
     [
       'Nexus 9',
     ],
-    statusbar: i19.r,
-    statusbarBlack: i19.r,
-    statusbarWhite: i19.r,
-    navbar: i20.r,
-    frame: i21.r,
+    statusbar: i22.r,
+    statusbarBlack: i22.r,
+    statusbarWhite: i22.r,
+    navbar: i23.r,
+    frame: i24.r,
   ),
   ScreenInfo(
     DeviceType.android,
@@ -169,7 +190,10 @@ const List<ScreenInfo> screens = [
     null,
     null,
     "phone",
-    ['default phone', 'Nexus 6', 'Pixel 4'],
+    [
+      'default phone',
+      'Nexus 6',
+    ],
   ),
   ScreenInfo(
     DeviceType.android,

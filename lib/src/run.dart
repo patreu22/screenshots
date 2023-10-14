@@ -532,6 +532,7 @@ Future<void> setEmulatorLocale(
       try {
         // locale change will load indefinitely if locale not installed on device
         // to detect this: timeout of 1 minute
+        printTrace('Waiting for locale change on \'$deviceName\'...');
         await Future(() => utils.waitAndroidLocaleChange(deviceId, testLocale))
             .timeout(Duration(minutes: 1));
       } on TimeoutException catch (e) {
