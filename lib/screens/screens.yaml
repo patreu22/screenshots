@@ -90,7 +90,7 @@ ios:
     resize: 86%
     resources:
       statusbar: screens/ios/2048/statusbar_white.png
-      statusbar black: screens/ios/2048/statusbar_white.png
+      statusbar black: screens/ios/2048/statusbar_black.png
       statusbar white: screens/ios/2048/statusbar_white.png
       frame: screens/ios/phones/iPad_Pro_Silver.png
     offset: -0-0
@@ -102,7 +102,7 @@ ios:
     resize: 91.25%
     resources:
       statusbar: screens/ios/2048/statusbar_white.png
-      statusbar black: screens/ios/2048/statusbar_white.png
+      statusbar black: screens/ios/2048/statusbar_black.png
       statusbar white: screens/ios/2048/statusbar_white.png
       frame: screens/ios/phones/iPad_Pro_Space_Grey_3rd_Generation.png
     offset: -3+2
