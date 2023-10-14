@@ -17,8 +17,8 @@ Future<void> screenshot(binding, tester, String name) async {
       'convertFlutterSurfaceToImage',
       null,
     );
-    await tester.pumpAndSettle();
   } // TODO: Change to binding.convertFlutterSurfaceToImage() when this issue is fixed: https://github.com/flutter/flutter/issues/92381
+  await tester.pumpAndSettle();
 
   // TODO: Replace the following block with binding.takeScreenshot(name) when this issue is fixed: https://github.com/flutter/flutter/issues/92381
   binding.reportData ??= <String, dynamic>{};
