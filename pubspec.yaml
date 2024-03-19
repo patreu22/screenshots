@@ -33,7 +33,7 @@ dev_dependencies:
   mockito: ^5.0.16
   pedantic: ^1.8.0+1
   quiver: ^3.0.0
-  fake_process_manager: ^0.2.0
+#  fake_process_manager: ^0.2.0
   collection: any
   integration_test:
     sdk: flutter
