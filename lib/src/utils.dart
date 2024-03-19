@@ -27,9 +27,10 @@ void moveFiles(String srcDir, String dstDir) {
   }
   fs.directory(srcDir).listSync().forEach((file) {
     // do not rename as the source and destination path might be on different partitions
-    assert(file is File);
-    (file as File).copySync('$dstDir/${p.basename(file.path)}');
-    file.deleteSync();
+    // assert(file is File);
+    // printStatus("foobarbar");
+    file.renameSync('$dstDir/${p.basename(file.path)}');
+    // file.deleteSync();
   });
 }
 
@@ -375,7 +376,7 @@ Future<String?> waitSysLogMsg(
   final process = ProcessWrapper(delegate);
   return await process.stdout
 //      .transform<String>(cnv.Utf8Decoder(reportErrors: false)) // from flutter tools
-      .transform<String?>(Utf8Decoder())
+      .transform<String?>(Utf8Decoder().decoder)
       .transform<String?>(const LineSplitter())
       .firstWhere((line) {
     if (line == null) {
