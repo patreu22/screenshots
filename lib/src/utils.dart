@@ -375,7 +375,7 @@ Future<String?> waitSysLogMsg(
   final process = ProcessWrapper(delegate);
   return await process.stdout
 //      .transform<String>(cnv.Utf8Decoder(reportErrors: false)) // from flutter tools
-      .transform<String?>(Utf8Decoder())
+      .transform<String?>(Utf8Decoder().decoder)
       .transform<String?>(const LineSplitter())
       .firstWhere((line) {
     if (line == null) {
