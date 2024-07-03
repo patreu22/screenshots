@@ -76,9 +76,13 @@ class Config {
     var locales = _processList(_configInfo['locales']);
     var staging = _configInfo['staging'];
     var archive = _configInfo['archive'];
+    var flutterDriveArgs = _configInfo['flutter_drive_args'] != null
+        ? _processList(_configInfo['flutter_drive_args'])
+        : <String>[];
 
     return Config._(
         devices: devices,
+        flutterDriveArgs: flutterDriveArgs,
         isFrameEnabled: isFrameEnabled,
         driver: driver,
         tests: tests,
@@ -92,6 +96,7 @@ class Config {
     required this.devices,
     required this.isFrameEnabled,
     required this.driver,
+    required this.flutterDriveArgs,
     required this.tests,
     required this.stagingDir,
     required this.locales,
@@ -103,6 +108,8 @@ class Config {
   final List<ConfigDevice> devices;
 
   String driver;
+
+  List<String> flutterDriveArgs;
 
   // Getters
   List<String> tests;
