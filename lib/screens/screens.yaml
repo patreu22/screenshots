@@ -90,7 +90,7 @@ ios:
     resize: 86%
     resources:
       statusbar: screens/ios/2048/statusbar_white.png
-      statusbar black: screens/ios/2048/statusbar_white.png
+      statusbar black: screens/ios/2048/statusbar_black.png
       statusbar white: screens/ios/2048/statusbar_white.png
       frame: screens/ios/phones/iPad_Pro_Silver.png
     offset: -0-0
@@ -102,7 +102,7 @@ ios:
     resize: 91.25%
     resources:
       statusbar: screens/ios/2048/statusbar_white.png
-      statusbar black: screens/ios/2048/statusbar_white.png
+      statusbar black: screens/ios/2048/statusbar_black.png
       statusbar white: screens/ios/2048/statusbar_white.png
       frame: screens/ios/phones/iPad_Pro_Space_Grey_3rd_Generation.png
     offset: -3+2
@@ -139,6 +139,20 @@ android:
     devices:
       - Nexus 6P
       - Pixel 4
+  6inch:
+    size: 1080x2340
+    resize: 80%
+    resources:
+      statusbar: screens/android/1080/statusbar-pixel5.png
+      statusbar black: screens/android/1080/statusbar-pixel5.png
+      statusbar white: screens/android/1080/statusbar-pixel5.png
+      # navbar: screens/android/1080/navbar-pixel5.png
+      navbar: screens/android/1080/navbar-pixel5-gesture.png
+      frame: screens/android/phones/Google Pixel 5 Just Black.png
+    offset: -3+8
+    destName: phone
+    devices:
+      - Pixel 5
   8.9inch:
     size: 1536x2048
     resize: 80%

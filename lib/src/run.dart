@@ -392,6 +392,8 @@ class Screenshots {
       if (flavor != null) {
         command.addAll(['--flavor', flavor!]);
       }
+      command.addAll(config.flutterDriveArgs);
+      command.addAll(['--dart-define', 'testing_mode=true']);
       command.addAll(['--driver', config.driver]);
       command.addAll(testPath.split(" ")); // add test path or custom command
       printStatus('Running: ${command.join(" ")}');
@@ -531,6 +533,7 @@ Future<void> setEmulatorLocale(
       try {
         // locale change will load indefinitely if locale not installed on device
         // to detect this: timeout of 1 minute
+        printTrace('Waiting for locale change on \'$deviceName\'...');
         await Future(() => utils.waitAndroidLocaleChange(deviceId, testLocale))
             .timeout(Duration(minutes: 1));
       } on TimeoutException catch (e) {

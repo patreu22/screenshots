@@ -197,6 +197,7 @@ class DaemonClient {
     _waitForResponse[id] = res;
     command['id'] = id;
     final str = '[${json.encode(command)}]';
+    printStatus("execute command: $str");
     _process!.stdin
       ..writeln(str)
       ..flush();

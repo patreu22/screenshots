@@ -3,6 +3,7 @@ import 'package:screenshots/src/screenshot_handler.dart';
 
 Future<void> main() async {
   await integrationDriver(
-      onScreenshot: (String screenshotName, List<int> screenshotBytes) async =>
+      onScreenshot: (String screenshotName, List<int> screenshotBytes,
+              [args]) async =>
           screenshotHandler(screenshotName, screenshotBytes));
 }

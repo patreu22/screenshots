@@ -34,4 +34,4 @@ example/android/fastlane
 # code coverage
 coverage/
 bin/*.exe
-.flutter-plugins
+.flutter-plugins*
