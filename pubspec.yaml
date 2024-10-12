@@ -1,10 +1,10 @@
 name: screenshots
 description: Auto-generation of screenshots for Apple and Play Stores using emulators, simulators and real devices. Includes support for multiple locales and framing. Compatible with fastlane.
-version: 3.1.4
+version: 3.1.5
 homepage: https://github.com/mmcc007/screenshots
 
 environment:
-  sdk: ">=2.12.0"
+  sdk: ">=2.12.0 <4.0.0"
 
 dependencies:
   args: ^2.3.0
