@@ -35,3 +35,6 @@ example/android/fastlane
 coverage/
 bin/*.exe
 .flutter-plugins*
+
+# FVM Version Cache
+.fvm/
