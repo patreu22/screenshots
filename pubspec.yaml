@@ -27,7 +27,7 @@ dependencies:
       url: https://github.com/meltzow/tool_base.git
 
 dev_dependencies:
-  build_runner: ^2.1.4
+  build_runner: ^2.4.13
   test: ^1.19.2
   #  test_api: ^0.2.5
   mockito: ^5.0.16
