@@ -94,7 +94,7 @@ class Screenshots {
     // note: unstarted simulators are not properly included in this list
     //       so have to be handled separately
     emulators = await daemonClient.emulators;
-    emulators.sort(utils.emulatorComparison);
+    emulators.sort((a, b) => utils.emulatorComparison(a, b));
 
     // validate config file
     if (!await validate.isValidConfig(config, screens, devices, emulators)) {
