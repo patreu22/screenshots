@@ -28,7 +28,7 @@ class ImageProcessor {
 
   /// Process screenshots.
   ///
-  /// If android, screenshot is overlaid with a status bar and appended with
+  /// If android, screenshot is overlaid with a status bar and overlaid with
   /// a navbar.
   ///
   /// If ios, screenshot is overlaid with a status bar.
@@ -192,7 +192,7 @@ class ImageProcessor {
       'screenshotPath': screenshotPath,
       'screenshotNavbarPath': paths.navbar?.path,
     };
-    await im.convert('append', options);
+    await im.convert('appendNavbar', options);
   }
 
   /// Frame a screenshot with image of device.
