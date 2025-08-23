@@ -5,7 +5,6 @@ import 'package:intl/intl.dart';
 import 'package:path/path.dart' as path;
 import 'package:tool_base/tool_base.dart' hide Config;
 import 'package:tool_mobile/tool_mobile.dart';
-
 import 'archive.dart';
 import 'config.dart';
 import 'context_runner.dart';
@@ -94,7 +93,8 @@ class Screenshots {
     // note: unstarted simulators are not properly included in this list
     //       so have to be handled separately
     emulators = await daemonClient.emulators;
-    emulators.sort((a, b) => utils.emulatorComparison(a, b));
+    // emulators.sort((a, b) =>
+    //     utils.emulatorComparison(a as DaemonEmulator, b as DaemonEmulator));
 
     // validate config file
     if (!await validate.isValidConfig(config, screens, devices, emulators)) {
