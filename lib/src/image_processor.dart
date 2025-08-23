@@ -51,7 +51,7 @@ class ImageProcessor {
     } else {
       // add frame if required
       if (device.isFrameRequired(orientation)) {
-        final status = logger.startProgress(
+        final status = logger?.startProgress(
             'Processing screenshots from test...',
             timeout: Duration(minutes: 4));
 
@@ -75,7 +75,7 @@ class ImageProcessor {
           // await frame(_config.stagingDir, screenProps, paths,
           //     screenshotPath.path, device.deviceType, runMode);
         }
-        status.stop();
+        status?.stop();
       } else {
         printStatus('Warning: framing is not enabled');
       }

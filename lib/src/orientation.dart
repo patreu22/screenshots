@@ -28,27 +28,27 @@ void changeDeviceOrientation(DeviceType deviceType, Orientation orientation,
   printStatus('Setting orientation to $_orientation');
   switch (deviceType) {
     case DeviceType.android:
-      var id = deviceId == null ? <String>[] : ['-s', deviceId];
-      cmd([getAdbPath(androidSdk)] +
-          id +
-          [
-            'shell',
-            'settings',
-            'put',
-            'system',
-            'accelerometer_rotation',
-            '0',
-          ]);
-      cmd([getAdbPath(androidSdk)] +
-          id +
-          [
-            'shell',
-            'settings',
-            'put',
-            'system',
-            'user_rotation',
-            androidOrientations[_orientation]!,
-          ]);
+      List<String> id = deviceId == null ? <String>[] : ['-s', deviceId!];
+      cmd([
+        getAdbPath(androidSdk)!,
+        ...id,
+        'shell',
+        'settings',
+        'put',
+        'system',
+        'accelerometer_rotation',
+        '0'
+      ]);
+      cmd([
+        getAdbPath(androidSdk)!,
+        ...id,
+        'shell',
+        'settings',
+        'put',
+        'system',
+        'user_rotation',
+        androidOrientations[_orientation]!
+      ]);
       break;
     case DeviceType.ios:
       // requires permission when run for first time

@@ -170,6 +170,22 @@ const List<ScreenInfo> screens = [
   ),
   ScreenInfo(
     DeviceType.android,
+    '6.8inch',
+    "1440x2560",
+    "80%",
+    "-3+8",
+    "phone",
+    [
+      'Samsung Galaxy S21 Ultra',
+    ],
+    statusbar: i17.r,
+    statusbarBlack: i17.r,
+    statusbarWhite: i17.r,
+    navbar: i18.r,
+    frame: i19.r,
+  ),
+  ScreenInfo(
+    DeviceType.android,
     '8.9inch',
     "1536x2048",
     "80%",

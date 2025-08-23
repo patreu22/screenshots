@@ -54,6 +54,7 @@ class ImageMagick {
           '-composite',
           options['screenshotPath'],
         ];
+        break;
       case 'append':
         // convert -append screenshot_statusbar.png navbar.png final_screenshot.png
         cmdOptions = [

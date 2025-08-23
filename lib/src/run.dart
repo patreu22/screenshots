@@ -82,10 +82,10 @@ class Screenshots {
   /// 5. If not a real device, stop emulator/simulator.
   Future<bool> run() async {
     // start flutter daemon
-    final status = logger.startProgress('Starting flutter daemon...',
+    final status = logger?.startProgress('Starting flutter daemon...',
         timeout: Duration(milliseconds: 10000));
     await daemonClient.start;
-    status.stop();
+    status?.stop();
 
     // get all attached devices and running emulators/simulators
     devices = await daemonClient.devices;
@@ -551,7 +551,7 @@ Future<void> setEmulatorLocale(
 /// Change local of real android device or running emulator.
 Future<bool> changeAndroidLocale(
     String deviceId, String deviceLocale, String testLocale) async {
-  if (utils.cmd([getAdbPath(androidSdk), '-s', deviceId, 'root']) ==
+  if (utils.cmd([getAdbPath(androidSdk)!, '-s', deviceId, 'root']) ==
       'adbd cannot run as root in production builds\n') {
     printError(
         'Warning: locale will not be changed. Running in locale \'$deviceLocale\'.\n');
@@ -569,7 +569,7 @@ Future<bool> changeAndroidLocale(
   for (var i = 0; i < 5; i++) {
     try {
       utils.cmd([
-        getAdbPath(androidSdk),
+        getAdbPath(androidSdk)!,
         '-s',
         deviceId,
         'shell',
@@ -603,7 +603,7 @@ Future<void> _changeSimulatorLocale(
 /// Shutdown an android emulator.
 Future<String> shutdownAndroidEmulator(
     DaemonClient daemonClient, String deviceId) async {
-  utils.cmd([getAdbPath(androidSdk), '-s', deviceId, 'emu', 'kill']);
+  utils.cmd([getAdbPath(androidSdk)!, '-s', deviceId, 'emu', 'kill']);
 //  await waitAndroidEmulatorShutdown(deviceId);
   try {
     await Future(

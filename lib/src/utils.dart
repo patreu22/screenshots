@@ -159,7 +159,7 @@ String? getAndroidDeviceLocale(String deviceId) {
 // ro.product.locale is available on first boot but does not update,
 // persist.sys.locale is empty on first boot but updates with locale changes
   var locale = cmd([
-    getAdbPath(androidSdk),
+    getAdbPath(androidSdk)!,
     '-s',
     deviceId,
     'shell',
@@ -172,7 +172,7 @@ String? getAndroidDeviceLocale(String deviceId) {
   }
 
   locale = cmd([
-    getAdbPath(androidSdk),
+    getAdbPath(androidSdk)!,
     '-s',
     deviceId,
     'shell',
@@ -355,12 +355,12 @@ DaemonDevice? getDeviceFromId(List<DaemonDevice> devices, String deviceId) {
 /// Wait for message to appear in sys log and return first matching line
 Future<String?> waitSysLogMsg(
     String deviceId, RegExp regExp, String locale) async {
-  cmd([getAdbPath(androidSdk), '-s', deviceId, 'logcat', '-c']);
+  cmd([getAdbPath(androidSdk)!, '-s', deviceId, 'logcat', '-c']);
 //  await Future.delayed(Duration(milliseconds: 1000)); // wait for log to clear
   await Future.delayed(Duration(milliseconds: 500)); // wait for log to clear
   // -b main ContactsDatabaseHelper:I '*:S'
   final delegate = await runCommand([
-    getAdbPath(androidSdk),
+    getAdbPath(androidSdk)!,
     '-s',
     deviceId,
     'logcat',
@@ -375,7 +375,7 @@ Future<String?> waitSysLogMsg(
   final process = ProcessWrapper(delegate);
   return await process.stdout
 //      .transform<String>(cnv.Utf8Decoder(reportErrors: false)) // from flutter tools
-      .transform<String?>(Utf8Decoder().decoder)
+      .transform<String?>(Utf8Decoder())
       .transform<String?>(const LineSplitter())
       .firstWhere((line) {
     if (line == null) {
@@ -425,7 +425,7 @@ Future<bool> isAdbPath() async {
   return await runInContext<bool>(() async {
     try {
       final adbPath = getAdbPath(androidSdk);
-      return adbPath.isNotEmpty;
+      return adbPath?.isNotEmpty ?? false;
     } catch (e) {
       return false;
     }
