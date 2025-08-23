@@ -31,7 +31,7 @@ class ScreenshotsEnv {
 
   static ScreenshotsEnv fromJson(Screens screens, Map<String, dynamic> map) =>
       ScreenshotsEnv(
-        screen: screens.getScreen(map['screen']) as ScreenInfo,
+        screen: screens.getScreen(map['screen'])!,
         device: map['device'],
         locale: map['locale'],
         orientation:

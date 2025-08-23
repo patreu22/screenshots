@@ -7,8 +7,7 @@ The default counter app with internationalization support.
 This is an app that demonstrates `screenshots`.
 
 First confirm devices are attached or emulators/simulators are installed for the following devices:
-
-```yaml
+````yaml
 # A list of devices to run tests on
 devices:
   ios:
@@ -17,23 +16,20 @@ devices:
       frame: false
   android:
     Nexus 6P:
-```
+````
 
 Then run with:
-
-```
+````
 $ screenshots
-```
+````
 
 The generated screenshots can be found in:
-
-```
+````
 android/fastlane/metadata/android
 ios/fastlane/screenshots
-```
+````
 
 ## See `screenshots` in action!
-
 To view `screenshots` running with this example app on travis see:  
 https://travis-ci.com/mmcc007/screenshots
 

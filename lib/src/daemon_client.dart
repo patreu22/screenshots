@@ -101,9 +101,12 @@ class DaemonClient {
         final iosDevice = _iosDevices
             ?.firstWhereOrNull((iosDevice) => iosDevice['id'] == device['id']);
         if (iosDevice == null) {
-          throw 'Error: could not find model name for real ios device: ${device['name']}';
+          print(
+              'Could not find model name for real iOS device: ${device['name']}');
+          device['model'] = 'Unknown'; // Set a default value
+        } else {
+          device['model'] = iosDevice['model'];
         }
-        device['model'] = iosDevice['model'];
       }
       final daemonDevice = loadDaemonDevice(device);
       printTrace('daemonDevice=$daemonDevice');
@@ -238,7 +241,7 @@ List<Map<String, String>> getIosDevices() {
   try {
     cmd(['sh', '-c', 'ios-deploy -V']);
   } catch (e) {
-    throw "Executable \'ios-deploy\' throws exception (brew install ios-deploy)";
+    throw "Executable 'ios-deploy' throws exception (brew install ios-deploy)";
   }
 
   final regExp = RegExp(r'Found (\w+) \(\w+, (.*), \w+, \w+');
@@ -251,13 +254,20 @@ List<Map<String, String>> getIosDevices() {
   if (iosDeployDevices.isEmpty || iosDeployDevices[0] == noAttachedDevices) {
     return [];
   }
-  return iosDeployDevices.map((line) {
-    final matches = regExp.firstMatch(line);
-    final device = <String, String>{};
-    device['id'] = matches!.group(1)!;
-    device['model'] = matches.group(2)!;
-    return device;
-  }).toList();
+  return iosDeployDevices
+      .map((line) {
+        final matches = regExp.firstMatch(line);
+        if (matches == null || matches.groupCount < 2) {
+          printError('Failed to parse device info: $line');
+          return null;
+        }
+        final device = <String, String>{};
+        device['id'] = matches.group(1) ?? '';
+        device['model'] = matches.group(2) ?? '';
+        return device;
+      })
+      .whereType<Map<String, String>>()
+      .toList();
 }
 
 /// Wait for emulator or simulator to start
