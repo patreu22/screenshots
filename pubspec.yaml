@@ -41,12 +41,10 @@ dev_dependencies:
 dependency_overrides:
   tool_mobile:
     git:
-      url: https://github.com/claudius-kienle/tool_mobile
-      ref: 38b2ddc
+      url: https://github.com/patreu22/tool_mobile
   tool_base:
     git:
-      ref: f602ac79
-      url: https://github.com/claudius-kienle/tool_base.git
+      url: https://github.com/patreu22/tool_base.git
 
 executables:
   screenshots: main
