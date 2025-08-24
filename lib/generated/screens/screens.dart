@@ -81,6 +81,7 @@ const List<ScreenInfo> screens = [
       'iPhone 12 Pro Max',
       'iPhone 13 Pro Max',
       'iPhone 14 Plus',
+      'My iPhone 16 Pro',
     ],
     statusbar: i7.r,
     statusbarBlack: i8.r,
@@ -97,6 +98,7 @@ const List<ScreenInfo> screens = [
     [
       'iPad Pro (12.9-inch) (1st generation)',
       'iPad Pro (12.9-inch) (2nd generation)',
+      'iPad Pro (12.9-inch) (6th generation)',
     ],
     statusbar: i10.r,
     statusbarBlack: i11.r,
