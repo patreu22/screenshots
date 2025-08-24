@@ -98,7 +98,6 @@ ios:
     devices:
       - iPad Pro (12.9-inch) (1st generation)
       - iPad Pro (12.9-inch) (2nd generation)
-      - iPad Pro (12.9-inch) (6th generation)
   12.9inch_3rd_generation:
     size: 2048x2732
     resize: 91.25%
@@ -111,6 +110,7 @@ ios:
     devices:
       - iPad Pro (12.9-inch) (3rd generation)
       - iPad Pro (12.9-inch) (4th generation)
+      - iPad Pro (12.9-inch) (6th generation)
 android:
   5.2inch:
     size: 1080x1920
