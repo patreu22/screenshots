@@ -181,6 +181,7 @@ android:
     destName: tenInch
     devices:
       - Nexus 9
+      - Screenshot Medium Tablet
   # placeholder for android device type (phone/tenInch/sevenInch)
   # used when framing is off to generate fastlane path
   # (avoids warning about using 'phone' as default)

@@ -195,6 +195,7 @@ const List<ScreenInfo> screens = [
     "tenInch",
     [
       'Nexus 9',
+      'Screenshot Medium Tablet',
     ],
     statusbar: i23.r,
     statusbarBlack: i23.r,
