@@ -170,7 +170,7 @@ android:
       - Samsung Galaxy S21 Ultra
   8.9inch:
     size: 1536x2048
-    resize: 80%
+    resize: 100%
     resources:
       statusbar: screens/android/1536/statusbar.png
       statusbar black: screens/android/1536/statusbar.png

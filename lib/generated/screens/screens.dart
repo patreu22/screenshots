@@ -190,7 +190,7 @@ const List<ScreenInfo> screens = [
     DeviceType.android,
     '8.9inch',
     "1536x2048",
-    "80%",
+    "100%",
     "+0+0",
     "tenInch",
     [
